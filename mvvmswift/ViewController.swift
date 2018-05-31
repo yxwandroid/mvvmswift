@@ -14,8 +14,8 @@
 //
 
 import UIKit
-import RxSwift
-import RxCocoa
+//import RxSwift
+//import RxCocoa
 
 class ViewController: UIViewController,ViewModelDelegate {
 
@@ -26,7 +26,7 @@ class ViewController: UIViewController,ViewModelDelegate {
     
     @IBOutlet weak var btnRxSwift: UIButton!
     var viewModel: ViewModel!
-    let bag = DisposeBag()
+   // let bag = DisposeBag()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,11 +41,11 @@ class ViewController: UIViewController,ViewModelDelegate {
         // 类里面懒加载 DisposeBag 对象
   
         
-        // 增加点击监听
-        btnRxSwift.rx.tap.subscribe { (event: Event<()>) in
-            print("按钮1 被点")
-            }.disposed(by: bag)
-        
+//        // 增加点击监听
+//        btnRxSwift.rx.tap.subscribe { (event: Event<()>) in
+//            print("按钮1 被点")
+//            }.disposed(by: bag)
+//
        
     }
     //MARK: Action
